@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><tululoo version="130" uid="4" title="" advancedscriptmode="0" imgfolder="img" audfolder="aud"><functions/><variables/><comments>TULULOO Game Maker
+Tutorial 01.
+
+In this example:
+
+- creating the player
+- controlling the player</comments><sprites count="1"><sprite name="spr_player" centerx="20" centery="20" collisionshape="Circle" collisionradius="16" collisionleft="0" collisionright="40" collisiontop="0" collisionbottom="40"/></sprites><frames count="1"><frame file="0" sprite="spr_player"/></frames><sounds count="0"/><musics count="0"/><backgrounds count="0"/><fonts count="0"/><objects count="2"><object name="obj_player" template="" prototype="1" scene="" sprite="spr_player" x="0" y="0" visible="1" depth="0" collision="1" parent="" direction="0" image_angle="0"/><object name="SceneObject1" template="obj_player" prototype="0" scene="test_level" sprite="spr_player" x="320" y="220" visible="0" depth="0" collision="1" parent="" direction="0" image_angle="0"/></objects><scripts count="1"><script name="SCRIPT 0" object="obj_player" event="Step" parameter="">
+// WHEN THE RIGHT ARROW IS PUSHED
+// MOVES THE PLAYER TO THE RIGHT
+if ( keyboard_check( vk_right )) {
+	x = x + 5;
+}
+
+// WHEN THE LEFT ARROW IS PUSHED
+// MOVES THE PLAYER TO THE LEFT
+if ( keyboard_check( vk_left )) {
+	x = x - 5;
+}
+
+// WHEN THE UP ARROW IS PUSHED
+// MOVES THE PLAYER TO UP
+if ( keyboard_check( vk_up )) {
+	y = y - 5;
+}
+
+// WHEN THE DOWN ARROW IS PUSHED
+// MOVES THE PLAYER TO DOWN
+if ( keyboard_check( vk_down )) {
+	y = y + 5;
+}</script></scripts><scenes count="1"><scene name="test_level" width="640" height="480" speed="60" red="46" green="90" blue="65" background="" backgroundstretch="0" backgroundtilex="0" backgroundtiley="0" viewportwidth="640" viewportheight="480" viewportxborder="50" viewportyborder="0" viewportobject=""/></scenes><layers count="0"/><tiles count="0"/><fns count="0"/></tululoo>

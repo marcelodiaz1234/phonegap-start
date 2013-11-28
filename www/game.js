@@ -1361,54 +1361,14 @@ tu_init();
  * SPRITES
  ***********************************************************************/
 function __spr_player() { 
-__sprite_init__(this, spr_player, 20, 40, 10, 40, 'Box', 10, 0, 20, 2, 40, ['img/spr_player_0.png']);
+__sprite_init__(this, spr_player, 40, 40, 20, 20, 'Circle', 16, 0, 40, 0, 40, ['img/spr_player_0.png']);
 }; var spr_player = new __spr_player();
-
-function __spr_ground() { 
-__sprite_init__(this, spr_ground, 40, 40, 0, 0, 'Box', 20, 0, 40, 0, 40, ['img/spr_ground_0.png']);
-}; var spr_ground = new __spr_ground();
-
-function __spr_diamond() { 
-__sprite_init__(this, spr_diamond, 10, 10, 5, 5, 'Box', 5, 0, 10, 0, 10, ['img/spr_diamond_0.png','img/spr_diamond_1.png','img/spr_diamond_2.png','img/spr_diamond_3.png','img/spr_diamond_4.png','img/spr_diamond_5.png','img/spr_diamond_6.png','img/spr_diamond_7.png','img/spr_diamond_8.png','img/spr_diamond_9.png']);
-}; var spr_diamond = new __spr_diamond();
-
-function __spr_bullet() { 
-__sprite_init__(this, spr_bullet, 8, 8, 4, 4, 'Circle', 4, 0, 8, 0, 8, ['img/spr_bullet_0.png']);
-}; var spr_bullet = new __spr_bullet();
-
-function __spr_box() { 
-__sprite_init__(this, spr_box, 40, 40, 0, 0, 'Box', 20, 0, 40, 0, 40, ['img/spr_box_0.png']);
-}; var spr_box = new __spr_box();
-
-function __spr_piece() { 
-__sprite_init__(this, spr_piece, 11, 11, 5, 5, 'Circle', 5, 0, 11, 0, 11, ['img/spr_piece_0.png']);
-}; var spr_piece = new __spr_piece();
-
-function __spr_cloud() { 
-__sprite_init__(this, spr_cloud, 187, 60, 93, 30, 'Box', 93, 0, 187, 0, 60, ['img/spr_cloud_0.png']);
-}; var spr_cloud = new __spr_cloud();
 
 
 
 /***********************************************************************
  * SOUNDS
  ***********************************************************************/
-function __snd_bullet() { 
-__audio_init__(this, snd_bullet, 'aud/hit05.wav', '', '');
-}; var snd_bullet = new __snd_bullet();
-
-function __snd_boxhit() { 
-__audio_init__(this, snd_boxhit, 'aud/explosion06.wav', '', '');
-}; var snd_boxhit = new __snd_boxhit();
-
-function __snd_jump() { 
-__audio_init__(this, snd_jump, 'aud/coin06.wav', '', '');
-}; var snd_jump = new __snd_jump();
-
-function __snd_diamond() { 
-__audio_init__(this, snd_diamond, 'aud/coin01.wav', '', '');
-}; var snd_diamond = new __snd_diamond();
-
 
 
 /***********************************************************************
@@ -1419,9 +1379,6 @@ __audio_init__(this, snd_diamond, 'aud/coin01.wav', '', '');
 /***********************************************************************
  * BACKGROUNDS
  ***********************************************************************/
-function __background_clouds() { 
-__background_init__(this, background_clouds, 'img/cloudy.png')}; var background_clouds = new __background_clouds();
-
 
 
 /***********************************************************************
@@ -1434,56 +1391,34 @@ __background_init__(this, background_clouds, 'img/cloudy.png')}; var background_
  ***********************************************************************/
 function __obj_player() {
 __instance_init__(this, obj_player, null, 1, 0, spr_player, 1, 0);
-this.on_creation = function() {
-with(this) {
-this.air = 0;
-this.jump = 0;
-}
-};
+this.on_creation = on_creation_i;
 this.on_destroy = on_destroy_i;
 this.on_step = function() {
 with(this) {
-if ( keyboard_check(vk_right) ) {
-	x += 4;
-	direction = 0;
-	if (place_meeting(x, y, obj_ground) != null || place_meeting(x, y, obj_box) != null) {
-		x = xprevious;
-	}
+
+// WHEN THE RIGHT ARROW IS PUSHED
+// MOVES THE PLAYER TO THE RIGHT
+if ( keyboard_check( vk_right )) {
+	x = x + 5;
 }
 
-if ( keyboard_check(vk_left) ) {
-	x -= 4;
-	direction = 180;
-	if (place_meeting(x, y, obj_ground) != null || place_meeting(x, y, obj_box) != null) {
-		x = xprevious;
-	}
-
+// WHEN THE LEFT ARROW IS PUSHED
+// MOVES THE PLAYER TO THE LEFT
+if ( keyboard_check( vk_left )) {
+	x = x - 5;
 }
 
-if ( keyboard_check_pressed(vk_up) && jump == 0 ) {
-	jump = 1;
-	air = 9;
-	sound_play(snd_jump);
+// WHEN THE UP ARROW IS PUSHED
+// MOVES THE PLAYER TO UP
+if ( keyboard_check( vk_up )) {
+	y = y - 5;
 }
 
-if ( air > -5 ) air -= 0.5;
-
-y -= air;
-
-if ( place_meeting(x, y, obj_ground) != null  || place_meeting(x, y, obj_box) != null ) {
-	y = yprevious;
-	air = 0;
-	jump = 0;
+// WHEN THE DOWN ARROW IS PUSHED
+// MOVES THE PLAYER TO DOWN
+if ( keyboard_check( vk_down )) {
+	y = y + 5;
 }
-
-if (keyboard_check_pressed(vk_space)) {
-	bullet = instance_create(x,y - 25,obj_bullet);
-	bullet.direction = direction;
-	bullet.speed = 15;
-}
-
-if ( x < 0 ) x = 0;
-if ( x > room_width ) x = room_width;
 }
 };
 this.on_end_step = on_end_step_i;
@@ -1494,299 +1429,23 @@ this.on_animationend = on_animationend_i;
 this.on_draw = on_draw_i;
 }; var obj_player = new __obj_player();
 
-function __obj_ground() {
-__instance_init__(this, obj_ground, null, 1, 0, spr_ground, 1, 1);
-this.on_creation = on_creation_i;
-this.on_destroy = on_destroy_i;
-this.on_step = on_step_i;
-this.on_end_step = on_end_step_i;
-this.on_collision = on_collision_i;
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_ground = new __obj_ground();
-
-function __obj_diamond() {
-__instance_init__(this, obj_diamond, null, 1, 0, spr_diamond, 1, 68);
-this.on_creation = on_creation_i;
-this.on_destroy = on_destroy_i;
-this.on_step = on_step_i;
-this.on_end_step = on_end_step_i;
-this.on_collision = function() {
-with(this) {
-this.other = this.place_meeting(this.x, this.y, obj_player);
-if(this.other != null) {
-instance_destroy();
-sound_play(snd_diamond);
-}
-}
-};
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_diamond = new __obj_diamond();
-
-function __obj_bullet() {
-__instance_init__(this, obj_bullet, null, 1, 0, spr_bullet, 1, 111);
-this.on_creation = function() {
-with(this) {
-sound_play(snd_bullet);
-}
-};
-this.on_destroy = on_destroy_i;
-this.on_step = function() {
-with(this) {
-if (x < 0 || x > room_width) instance_destroy();
-}
-};
-this.on_end_step = on_end_step_i;
-this.on_collision = function() {
-with(this) {
-this.other = this.place_meeting(this.x, this.y, obj_ground);
-if(this.other != null) {
-instance_destroy();
-}
-}
-};
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_bullet = new __obj_bullet();
-
-function __obj_box() {
-__instance_init__(this, obj_box, null, 1, 0, spr_box, 1, 112);
-this.on_creation = on_creation_i;
-this.on_destroy = function() {
-with(this) {
-for (t = 0; t < 10; t++) {
-	instance_create(x,y,obj_piece);
-}
-}
-};
-this.on_step = on_step_i;
-this.on_end_step = on_end_step_i;
-this.on_collision = function() {
-with(this) {
-this.other = this.place_meeting(this.x, this.y, obj_bullet);
-if(this.other != null) {
-instance_destroy();
-sound_play(snd_boxhit);
-with (other) {
-	instance_destroy();
-}
-}
-}
-};
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_box = new __obj_box();
-
-function __obj_piece() {
-__instance_init__(this, obj_piece, null, 1, 0, spr_piece, 1, 131);
-this.on_creation = function() {
-with(this) {
-speed = irandom(2) + 2;
-direction = irandom(360);
-this.air = 0;
-image_angle = direction;
-}
-};
-this.on_destroy = on_destroy_i;
-this.on_step = function() {
-with(this) {
-y += air;
-air += 0.4;
-image_angle += air;
-}
-};
-this.on_end_step = on_end_step_i;
-this.on_collision = function() {
-with(this) {
-this.other = this.place_meeting(this.x, this.y, obj_ground);
-if(this.other != null) {
-instance_destroy();
-}
-}
-};
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_piece = new __obj_piece();
-
-function __obj_cloud() {
-__instance_init__(this, obj_cloud, null, 1, 100, spr_cloud, 1, 132);
-this.on_creation = function() {
-with(this) {
-speed = 1;
-direction = 180;
-}
-};
-this.on_destroy = on_destroy_i;
-this.on_step = function() {
-with(this) {
-if (x < -250 ) x = room_width + 250;
-}
-};
-this.on_end_step = on_end_step_i;
-this.on_collision = on_collision_i;
-this.on_roomstart = on_roomstart_i;
-this.on_roomend = on_roomend_i;
-this.on_animationend = on_animationend_i;
-this.on_draw = on_draw_i;
-}; var obj_cloud = new __obj_cloud();
-
 
 
 /***********************************************************************
  * SCENES
  ***********************************************************************/
-function __level1() { 
+function __test_level() { 
 this.tiles = [
 ];
 this.objects = [
-[{o:obj_ground, x:0, y:240}],
-[{o:obj_ground, x:40, y:240}],
-[{o:obj_ground, x:80, y:240}],
-[{o:obj_ground, x:120, y:240}],
-[{o:obj_ground, x:160, y:240}],
-[{o:obj_ground, x:200, y:240}],
-[{o:obj_ground, x:240, y:240}],
-[{o:obj_ground, x:280, y:240}],
-[{o:obj_ground, x:320, y:240}],
-[{o:obj_ground, x:360, y:240}],
-[{o:obj_ground, x:400, y:240}],
-[{o:obj_ground, x:440, y:240}],
-[{o:obj_ground, x:480, y:240}],
-[{o:obj_ground, x:520, y:240}],
-[{o:obj_ground, x:560, y:240}],
-[{o:obj_ground, x:600, y:240}],
-[{o:obj_ground, x:640, y:240}],
-[{o:obj_ground, x:680, y:240}],
-[{o:obj_ground, x:720, y:240}],
-[{o:obj_ground, x:760, y:240}],
-[{o:obj_ground, x:800, y:240}],
-[{o:obj_ground, x:840, y:240}],
-[{o:obj_ground, x:880, y:240}],
-[{o:obj_ground, x:920, y:240}],
-[{o:obj_ground, x:960, y:240}],
-[{o:obj_ground, x:1000, y:240}],
-[{o:obj_ground, x:1040, y:240}],
-[{o:obj_ground, x:1080, y:240}],
-[{o:obj_ground, x:1120, y:240}],
-[{o:obj_ground, x:1160, y:240}],
-[{o:obj_ground, x:1200, y:240}],
-[{o:obj_ground, x:1240, y:240}],
-[{o:obj_ground, x:1280, y:240}],
-[{o:obj_ground, x:1320, y:240}],
-[{o:obj_ground, x:1360, y:240}],
-[{o:obj_ground, x:1400, y:240}],
-[{o:obj_ground, x:1440, y:240}],
-[{o:obj_ground, x:1480, y:240}],
-[{o:obj_ground, x:1520, y:240}],
-[{o:obj_ground, x:1560, y:240}],
-[{o:obj_ground, x:280, y:160}],
-[{o:obj_ground, x:320, y:160}],
-[{o:obj_ground, x:360, y:160}],
-[{o:obj_ground, x:600, y:120}],
-[{o:obj_ground, x:640, y:120}],
-[{o:obj_ground, x:680, y:120}],
-[{o:obj_ground, x:800, y:160}],
-[{o:obj_ground, x:760, y:160}],
-[{o:obj_ground, x:960, y:200}],
-[{o:obj_ground, x:1000, y:160}],
-[{o:obj_ground, x:1040, y:120}],
-[{o:obj_ground, x:1080, y:120}],
-[{o:obj_ground, x:1120, y:120}],
-[{o:obj_ground, x:1160, y:120}],
-[{o:obj_ground, x:1200, y:140}],
-[{o:obj_ground, x:440, y:200}],
-[{o:obj_ground, x:520, y:160}],
-[{o:obj_ground, x:1300, y:180}],
-[{o:obj_ground, x:1480, y:100}],
-[{o:obj_ground, x:1280, y:80}],
-[{o:obj_ground, x:1320, y:60}],
-[{o:obj_ground, x:1400, y:60}],
-[{o:obj_ground, x:1440, y:60}],
-[{o:obj_ground, x:1520, y:200}],
-[{o:obj_ground, x:1560, y:160}],
-[{o:obj_player, x:120, y:240}],
-[{o:obj_diamond, x:300, y:140}],
-[{o:obj_diamond, x:380, y:140}],
-[{o:obj_diamond, x:620, y:100}],
-[{o:obj_diamond, x:320, y:100}],
-[{o:obj_diamond, x:360, y:100}],
-[{o:obj_diamond, x:700, y:100}],
-[{o:obj_diamond, x:640, y:60}],
-[{o:obj_diamond, x:680, y:60}],
-[{o:obj_diamond, x:780, y:120}],
-[{o:obj_diamond, x:800, y:120}],
-[{o:obj_diamond, x:820, y:120}],
-[{o:obj_diamond, x:780, y:140}],
-[{o:obj_diamond, x:800, y:140}],
-[{o:obj_diamond, x:820, y:140}],
-[{o:obj_diamond, x:1060, y:180}],
-[{o:obj_diamond, x:1080, y:180}],
-[{o:obj_diamond, x:1100, y:180}],
-[{o:obj_diamond, x:1120, y:180}],
-[{o:obj_diamond, x:1120, y:200}],
-[{o:obj_diamond, x:1100, y:200}],
-[{o:obj_diamond, x:1080, y:200}],
-[{o:obj_diamond, x:1060, y:200}],
-[{o:obj_diamond, x:1060, y:220}],
-[{o:obj_diamond, x:1080, y:220}],
-[{o:obj_diamond, x:1100, y:220}],
-[{o:obj_diamond, x:1120, y:220}],
-[{o:obj_diamond, x:1340, y:100}],
-[{o:obj_diamond, x:1500, y:80}],
-[{o:obj_diamond, x:1340, y:40}],
-[{o:obj_diamond, x:1360, y:40}],
-[{o:obj_diamond, x:1400, y:40}],
-[{o:obj_diamond, x:1460, y:40}],
-[{o:obj_diamond, x:1440, y:40}],
-[{o:obj_diamond, x:1420, y:40}],
-[{o:obj_diamond, x:1380, y:40}],
-[{o:obj_diamond, x:1580, y:140}],
-[{o:obj_diamond, x:1540, y:140}],
-[{o:obj_diamond, x:1200, y:100}],
-[{o:obj_diamond, x:1160, y:100}],
-[{o:obj_diamond, x:1120, y:100}],
-[{o:obj_diamond, x:1060, y:100}],
-[{o:obj_ground, x:1340, y:200}],
-[{o:obj_box, x:320, y:120}],
-[{o:obj_box, x:520, y:120}],
-[{o:obj_box, x:1140, y:200}],
-[{o:obj_box, x:1140, y:160}],
-[{o:obj_box, x:1180, y:200}],
-[{o:obj_box, x:1340, y:160}],
-[{o:obj_box, x:1340, y:120}],
-[{o:obj_box, x:1520, y:160}],
-[{o:obj_box, x:1060, y:80}],
-[{o:obj_box, x:1060, y:40}],
-[{o:obj_box, x:720, y:200}],
-[{o:obj_box, x:720, y:160}],
-[{o:obj_box, x:680, y:160}],
-[{o:obj_box, x:680, y:200}],
-[{o:obj_box, x:900, y:200}],
-[{o:obj_box, x:860, y:200}],
-[{o:obj_box, x:860, y:160}],
-[{o:obj_box, x:900, y:160}],
-[{o:obj_cloud, x:260, y:140}],
-[{o:obj_cloud, x:580, y:40}],
-[{o:obj_cloud, x:1280, y:120}],
-[{o:obj_cloud, x:1560, y:20}]];
+[{o:obj_player, x:320, y:220}]];
 this.start = function() {
-__room_start__(this, level1, 1600, 272, 60, 0, 0, 0, background_clouds.image, 1, 0, 0, 480, 272, obj_player, 230, 0);
+__room_start__(this, test_level, 640, 480, 60, 46, 90, 65, null, 0, 0, 0, 640, 480, null, 50, 0);
 };
 }
-var level1 = new __level1();
-tu_scenes.push(level1);
-tu_room_to_go = level1;
+var test_level = new __test_level();
+tu_scenes.push(test_level);
+tu_room_to_go = test_level;
 
 
 /***********************************************************************
