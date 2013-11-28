@@ -1360,9 +1360,9 @@ tu_init();
 /***********************************************************************
  * SPRITES
  ***********************************************************************/
-function __spr_player() { 
-__sprite_init__(this, spr_player, 40, 40, 20, 20, 'Circle', 16, 0, 40, 0, 40, ['img/spr_player_0.png']);
-}; var spr_player = new __spr_player();
+function __sprite_3() { 
+__sprite_init__(this, sprite_3, 24, 40, 0, 0, 'Box', 12, 0, 24, 0, 40, ['img/sprite_3_0.png']);
+}; var sprite_3 = new __sprite_3();
 
 
 
@@ -1379,6 +1379,9 @@ __sprite_init__(this, spr_player, 40, 40, 20, 20, 'Circle', 16, 0, 40, 0, 40, ['
 /***********************************************************************
  * BACKGROUNDS
  ***********************************************************************/
+function __background_2() { 
+__background_init__(this, background_2, 'img/bg.jpg')}; var background_2 = new __background_2();
+
 
 
 /***********************************************************************
@@ -1389,35 +1392,26 @@ __sprite_init__(this, spr_player, 40, 40, 20, 20, 'Circle', 16, 0, 40, 0, 40, ['
 /***********************************************************************
  * OBJECTS
  ***********************************************************************/
-function __obj_player() {
-__instance_init__(this, obj_player, null, 1, 0, spr_player, 1, 0);
+function __object_9() {
+__instance_init__(this, object_9, null, 1, 0, sprite_3, 1, 0);
 this.on_creation = on_creation_i;
 this.on_destroy = on_destroy_i;
 this.on_step = function() {
 with(this) {
+if ( keyboard_check( vk_right )) { 
+    x = x + 5; 
+} 
 
-// WHEN THE RIGHT ARROW IS PUSHED
-// MOVES THE PLAYER TO THE RIGHT
-if ( keyboard_check( vk_right )) {
-	x = x + 5;
-}
+if ( keyboard_check( vk_left )) { 
+    x = x - 5; 
+} 
 
-// WHEN THE LEFT ARROW IS PUSHED
-// MOVES THE PLAYER TO THE LEFT
-if ( keyboard_check( vk_left )) {
-	x = x - 5;
-}
+if ( keyboard_check( vk_up )) { 
+    y = y - 5; 
+} 
 
-// WHEN THE UP ARROW IS PUSHED
-// MOVES THE PLAYER TO UP
-if ( keyboard_check( vk_up )) {
-	y = y - 5;
-}
-
-// WHEN THE DOWN ARROW IS PUSHED
-// MOVES THE PLAYER TO DOWN
-if ( keyboard_check( vk_down )) {
-	y = y + 5;
+if ( keyboard_check( vk_down )) { 
+    y = y + 5; 
 }
 }
 };
@@ -1427,25 +1421,41 @@ this.on_roomstart = on_roomstart_i;
 this.on_roomend = on_roomend_i;
 this.on_animationend = on_animationend_i;
 this.on_draw = on_draw_i;
-}; var obj_player = new __obj_player();
+}; var object_9 = new __object_9();
 
 
 
 /***********************************************************************
  * SCENES
  ***********************************************************************/
-function __test_level() { 
+function __scene_5() { 
 this.tiles = [
 ];
 this.objects = [
-[{o:obj_player, x:320, y:220}]];
+[{o:object_9, x:80, y:200}]];
 this.start = function() {
-__room_start__(this, test_level, 640, 480, 60, 46, 90, 65, null, 0, 0, 0, 640, 480, null, 50, 0);
+__room_start__(this, scene_5, 180, 240, 30, 0, 0, 0, background_2.image, 0, 1, 0, 180, 240, object_9, 50, 50);
+
+if ( keyboard_check( vk_right )) { 
+    x = x + 5; 
+} 
+
+if ( keyboard_check( vk_left )) { 
+    x = x - 5; 
+} 
+
+if ( keyboard_check( vk_up )) { 
+    y = y - 5; 
+} 
+
+if ( keyboard_check( vk_down )) { 
+    y = y + 5; 
+}
 };
 }
-var test_level = new __test_level();
-tu_scenes.push(test_level);
-tu_room_to_go = test_level;
+var scene_5 = new __scene_5();
+tu_scenes.push(scene_5);
+tu_room_to_go = scene_5;
 
 
 /***********************************************************************
