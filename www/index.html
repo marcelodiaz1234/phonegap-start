@@ -1,15 +1,365 @@
-<html lang='en'>
-<head>
-<meta http-equiv='X-UA-Compatible' content='IE=edge' />
-<meta http-equiv='pragma' content='no-cache' />
-<meta name='apple-mobile-web-app-capable' content='yes' />
-<meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height' />
-<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
-<meta charset='utf-8' />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="es" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<link rel="shortcut icon" href="./misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" type="application/rss+xml" title="Tienda de mascotas RSS" href="http://queulatdev.usach.cl/petstore/rss.xml" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Tienda de mascotas</title>  
+  <style type="text/css" media="all">@import url("./modules/system/system.base.css?mzi3di");
+@import url("./modules/system/system.menus.css?mzi3di");
+@import url("./modules/system/system.messages.css?mzi3di");
+@import url("./modules/system/system.theme.css?mzi3di");</style>
+<style type="text/css" media="screen">@import url("./sites/all/modules/views_slideshow/views_slideshow.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./modules/comment/comment.css?mzi3di");
+@import url("./modules/field/theme/field.css?mzi3di");
+@import url("./modules/node/node.css?mzi3di");
+@import url("./modules/search/search.css?mzi3di");
+@import url("./modules/user/user.css?mzi3di");
+@import url("./sites/all/modules/views/css/views.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./sites/all/modules/ctools/css/ctools.css?mzi3di");
+@import url("./sites/all/modules/flexslider/assets/css/flexslider_img.css?mzi3di");
+@import url("./sites/all/libraries/flexslider/flexslider.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./sites/all/themes/omega/alpha/css/alpha-reset.css?mzi3di");
+@import url("./sites/all/themes/omega/alpha/css/alpha-mobile.css?mzi3di");
+@import url("./sites/all/themes/omega/alpha/css/alpha-alpha.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/formalize.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/omega-text.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/omega-branding.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/omega-menu.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/omega-forms.css?mzi3di");
+@import url("./sites/all/themes/omega/omega/css/omega-visuals.css?mzi3di");
+@import url("./sites/default/files/fontyourface/font.css?mzi3di");</style>
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin:500|Gloria+Hallelujah:regular&amp;subset=latin" media="all" />
+<style type="text/css" media="all">@import url("./sites/all/themes/mascotas/css/global.css?mzi3di");</style>
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">@import url("./sites/all/themes/mascotas/css/mascotas-alpha-default.css?mzi3di");
+@import url("./sites/all/themes/omega/alpha/css/grid/alpha_default/fluid/alpha-default-fluid-12.css?mzi3di");</style>
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("./sites/all/themes/mascotas/css/mascotas-alpha-default.css?mzi3di");
+@import url("./sites/all/themes/omega/alpha/css/grid/alpha_default/fluid/alpha-default-fluid-12.css?mzi3di");</style>
+<!--<![endif]-->
+  <script type="text/javascript" src="./misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="./misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="./misc/drupal.js?mzi3di"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&amp;mzi3di"></script>
+<script type="text/javascript" src="./sites/all/modules/views_slideshow/js/views_slideshow.js?v=1.0"></script>
+<script type="text/javascript" src="./sites/default/files/languages/es_OeX2da62x0NdoUiG2v1GMDTVM_D3qxFuvWh_dFQskeo.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/modules/ip_geoloc/js/ip_geoloc_current_location.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/libraries/flexslider/jquery.flexslider-min.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/modules/flexslider_views_slideshow/js/flexslider_views_slideshow.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/themes/mascotas/js/scripts.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/themes/omega/omega/js/jquery.formalize.js?mzi3di"></script>
+<script type="text/javascript" src="./sites/all/themes/omega/omega/js/omega-mediaqueries.js?mzi3di"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/petstore\/","pathPrefix":"","ajaxPageState":{"theme":"mascotas","theme_token":"CbucAxRwLFja3OKAjCNawzX1kHNQ0ZfG1iEBHAtjJUQ","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"https:\/\/maps.googleapis.com\/maps\/api\/js?sensor=true":1,"sites\/all\/modules\/views_slideshow\/js\/views_slideshow.js":1,"public:\/\/languages\/es_OeX2da62x0NdoUiG2v1GMDTVM_D3qxFuvWh_dFQskeo.js":1,"sites\/all\/modules\/ip_geoloc\/js\/ip_geoloc_current_location.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"sites\/all\/modules\/flexslider_views_slideshow\/js\/flexslider_views_slideshow.js":1,"sites\/all\/themes\/mascotas\/js\/scripts.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/views_slideshow\/views_slideshow.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie6.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie7.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie8.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie9.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/default\/files\/fontyourface\/font.css":1,"http:\/\/fonts.googleapis.com\/css?family=Cabin:500|Gloria+Hallelujah:regular\u0026subset=latin":1,"sites\/all\/themes\/mascotas\/css\/global.css":1,"ie::fluid::sites\/all\/themes\/mascotas\/css\/mascotas-alpha-default.css":1,"ie::fluid::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/fluid\/alpha-default-fluid-12.css":1,"fluid::sites\/all\/themes\/mascotas\/css\/mascotas-alpha-default.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/fluid\/alpha-default-fluid-12.css":1}},"ip_geoloc_menu_callback":"ip-geoloc-current-location","ip_geoloc_refresh_page":false,"viewsSlideshow":{"mascotas-block_2":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"pause":["viewsSlideshowControls","flexsliderViewsSlideshow"],"play":["viewsSlideshowControls","flexsliderViewsSlideshow"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0},"mascotas-block_3":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"pause":["viewsSlideshowControls","flexsliderViewsSlideshow"],"play":["viewsSlideshowControls","flexsliderViewsSlideshow"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"flexslider_views_slideshow":{"#flexslider_views_slideshow_main_mascotas-block_2":{"num_divs":3,"id_prefix":"#flexslider_views_slideshow_main_","vss_id":"mascotas-block_2","namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":7000,"directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Siguiente","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""},"#flexslider_views_slideshow_main_mascotas-block_3":{"num_divs":3,"id_prefix":"#flexslider_views_slideshow_main_","vss_id":"mascotas-block_3","namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":7000,"directionNav":true,"controlNav":1,"prevText":"Previous","nextText":"Siguiente","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"omega":{"layouts":{"primary":"fluid","order":["fluid"],"queries":{"fluid":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body style='background: black; margin: 0; padding: 0; overflow: hidden;'>
-<div id='tululoogame'></div>
-<a style='text-decoration:none;font-size:11px;font-family:arial;color:rgb(255,255,255);' href='http://www.tululoo.com'>Made with Tululoo Game Maker</a>
-<script type='text/javascript' src='game.js'></script>
-</body>
+<body class="html front not-logged-in page-node">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a>
+  </div>
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-6 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="./index.html" rel="home" title="Tienda de mascotas" class="active"><img src="./sites/all/themes/mascotas/logo.png" alt="Tienda de mascotas" id="logo" /></a>      </div>
+                        <hgroup class="site-name-slogan">        
+                                
+        <h1 class="site-name"><a href="./index.html" title="Inicio" class="active">Tienda de mascotas</a></h1>
+                              </hgroup>
+          </div>
+          </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-system block-menu block-main-menu block-system-main-menu odd block-without-title" id="block-system-main-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="./index.html" class="active">Inicio</a></li>
+<li class="leaf"><a href="/petstore/servicios2">Servicios</a></li>
+<li class="leaf"><a href="/petstore/adoptar" title="">Mascotas para adopción</a></li>
+<li class="leaf"><a href="/petstore/encontrada" title="">Mascotas encontradas</a></li>
+<li class="last leaf"><a href="/petstore/perdida" title="">Mascotas perdidas</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+        
+          </div>
+</div><div id="zone-header-wrapper" class="zone-wrapper zone-header-wrapper clearfix">  
+  <div id="zone-header" class="zone zone-header clearfix container-12">
+    <div class="grid-8 region region-header-first" id="region-header-first">
+  <div class="region-inner region-header-first-inner">
+    <section class="block block-views block-mascotas-block-2 block-views-mascotas-block-2 odd" id="block-views-mascotas-block-2">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Conoce nuestras mascotas</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-mascotas view-id-mascotas view-display-id-block_2 view-dom-id-042e617083d200ad0a6e2501963f2358">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="flexslider_views_slideshow_main_mascotas-block_2" class="flexslider_views_slideshow_main views_slideshow_main"><div class="flex-nav-container">
+  <div class="flexslider">
+    <ul id="flexslider_views_slideshow_mascotas-block_2" class="flexslider-views-slideshow-main-frame slides">
+        <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-1 views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/31.html"><img typeof="foaf:Image" src="./sites/default/files/styles/flexslider_full/public/cats.jpg?itok=Isqn0Ey8" width="800" height="500" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/31.html">bigotes</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">se regala bigotes por falta de espacio</div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/7.html"><img typeof="foaf:Image" src="./sites/default/files/styles/flexslider_full/public/imagefield_npgFql.jpg?itok=b79UjhRg" width="800" height="500" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/7.html">Luptatum Turpis</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Ad comis consectetuer decet facilisi haero.</div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/1.html"><img typeof="foaf:Image" src="./sites/default/files/styles/flexslider_full/public/imagefield_WhdpjQ.jpg?itok=ZJxkMYCg" width="800" height="500" alt="Augue dolore eligo elit eu exerci neo." title="Brevitas ibidem lucidus luctus quadrum quae." /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/1.html">Acsi Modo Olim Proprius</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Abluo modo ullamcorper vel. Abbas at damnum nimis paratus paulatim proprius ratis valde zelus.</div>  </div>  </li>
+    </ul>
+  </div>
+</div></div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-4 region region-header-second" id="region-header-second">
+  <div class="region-inner region-header-second-inner">
+    <section class="block block-views block-mascotas-block-3 block-views-mascotas-block-3 odd" id="block-views-mascotas-block-3">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Se busca!</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-mascotas view-id-mascotas view-display-id-block_3 view-dom-id-33d08c4181d6d9306cd4a0b3e5f71230">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="flexslider_views_slideshow_main_mascotas-block_3" class="flexslider_views_slideshow_main views_slideshow_main"><div class="flex-nav-container">
+  <div class="flexslider">
+    <ul id="flexslider_views_slideshow_mascotas-block_3" class="flexslider-views-slideshow-main-frame slides">
+        <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-1 views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/11.html"><img typeof="foaf:Image" src="./sites/default/files/styles/large/public/imagefield_H771WX.jpg?itok=h0zKg2a4" width="480" height="213" alt="Abico conventio metuo. Capto damnum exputo iustum molior refero sagaciter." title="Huic praemitto tego. Hos iustum mos saepius ymo." /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/11.html">Commoveo Defui Gilvus Immitto In Quis Vero</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Cogo eros eu. Defui genitus haero premo valde. Augue luptatum os utrum vel ymo.</div>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/8.html"><img typeof="foaf:Image" src="./sites/default/files/styles/large/public/imagefield_QzeDBg.jpg?itok=Fx2DXDgC" width="471" height="201" alt="Autem nunc oppeto quidne singularis utinam utrum." title="Abdo capto enim inhibeo iusto lenis lobortis magna neque suscipit." /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/8.html">Amet Antehabeo Dolus Haero Iriure Qui Ulciscor</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Duis eligo nimis quia similis vulpes. Adipiscing neque pneum probo sed usitas.</div>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><a href="./node/15.html"><img typeof="foaf:Image" src="./sites/default/files/styles/large/public/imagefield_DRIMfR.jpg?itok=wgGi9BKr" width="480" height="476" alt="Abico huic interdico lucidus pertineo plaga suscipere te turpis." title="Feugiat minim nunc pecus saepius singularis wisi." /></a></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content"><a href="./node/15.html">Ad Aliquam Autem Exputo Interdico Lobortis Luptatum Pecus Secundum Sudo Velit</a></h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Diam facilisi luctus probo voco. Iriure luctus sed valde.</div>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </li>
+    </ul>
+  </div>
+</div></div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <section class="block block-views block-tax-mascotas-block block-views-tax-mascotas-block odd" id="block-views-tax-mascotas-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Selecciona la mascota que buscas</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-tax-mascotas view-id-tax_mascotas view-display-id-block view-dom-id-a1b02d04d9f5085fb1d168c39d03ac6c">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/aves"><img typeof="foaf:Image" src="./sites/default/files/styles/square_thumbnail/public/birds-of-paradise.jpg?itok=jpTVRADr" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/aves">Aves</a></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/gatos"><img typeof="foaf:Image" src="./sites/default/files/styles/square_thumbnail/public/Cats.jpg?itok=wjK3AoBC" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/gatos">Gatos</a></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/peces"><img typeof="foaf:Image" src="./sites/default/files/styles/square_thumbnail/public/Fish-Background-Wallpapers-For-Desktop.jpg?itok=skn8W91N" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/peces">Peces</a></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/perros"><img typeof="foaf:Image" src="./sites/default/files/styles/square_thumbnail/public/Dogs-Pictures-6.jpg?itok=kAjVmSof" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/perros">Perros</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div><div id="zone-postscript-wrapper" class="zone-wrapper zone-postscript-wrapper clearfix">  
+  <div id="zone-postscript" class="zone zone-postscript clearfix container-12">
+    <div class="grid-3 region region-postscript-first" id="region-postscript-first">
+  <div class="region-inner region-postscript-first-inner">
+    <section class="block block-views block-publicidad-block block-views-publicidad-block odd" id="block-views-publicidad-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block view-dom-id-b4c4a40952bdc1cb648d7365fe7b1f49">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-second" id="region-postscript-second">
+  <div class="region-inner region-postscript-second-inner">
+    <section class="block block-views block-publicidad-block-1 block-views-publicidad-block-1 odd" id="block-views-publicidad-block-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_1 view-dom-id-3f16315d73b7b518e28e04b17bcd1817">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-third" id="region-postscript-third">
+  <div class="region-inner region-postscript-third-inner">
+    <section class="block block-views block-publicidad-block-2 block-views-publicidad-block-2 odd" id="block-views-publicidad-block-2">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_2 view-dom-id-6ad30edf6a779024472b45008e312ae7">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-fourth" id="region-postscript-fourth">
+  <div class="region-inner region-postscript-fourth-inner">
+    <section class="block block-views block-publicidad-block-3 block-views-publicidad-block-3 odd" id="block-views-publicidad-block-3">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_3 view-dom-id-c79e108896451918a644d9e6536ec6b4">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div></footer>  </div>  </body>
 </html>

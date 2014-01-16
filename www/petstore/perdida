@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<html lang="es" dir="ltr" version="HTML+RDFa 1.1"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="./../../misc/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>Perdida | Tienda de mascotas</title>  
+  <style type="text/css" media="all">@import url("./../../modules/system/system.base.css?mzi3di");
+@import url("./../../modules/system/system.menus.css?mzi3di");
+@import url("./../../modules/system/system.messages.css?mzi3di");
+@import url("./../../modules/system/system.theme.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./../../modules/comment/comment.css?mzi3di");
+@import url("./../../modules/field/theme/field.css?mzi3di");
+@import url("./../../modules/node/node.css?mzi3di");
+@import url("./../../modules/search/search.css?mzi3di");
+@import url("./../../modules/user/user.css?mzi3di");
+@import url("./../../sites/all/modules/views/css/views.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./../../sites/all/modules/ctools/css/ctools.css?mzi3di");</style>
+<style type="text/css" media="all">@import url("./../../sites/all/themes/omega/alpha/css/alpha-reset.css?mzi3di");
+@import url("./../../sites/all/themes/omega/alpha/css/alpha-mobile.css?mzi3di");
+@import url("./../../sites/all/themes/omega/alpha/css/alpha-alpha.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/formalize.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/omega-text.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/omega-branding.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/omega-menu.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/omega-forms.css?mzi3di");
+@import url("./../../sites/all/themes/omega/omega/css/omega-visuals.css?mzi3di");
+@import url("./../../sites/default/files/fontyourface/font.css?mzi3di");</style>
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin:500|Gloria+Hallelujah:regular&amp;subset=latin" media="all" />
+<style type="text/css" media="all">@import url("./../../sites/all/themes/mascotas/css/global.css?mzi3di");</style>
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">@import url("./../../sites/all/themes/mascotas/css/mascotas-alpha-default.css?mzi3di");
+@import url("./../../sites/all/themes/omega/alpha/css/grid/alpha_default/fluid/alpha-default-fluid-12.css?mzi3di");</style>
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("./../../sites/all/themes/mascotas/css/mascotas-alpha-default.css?mzi3di");
+@import url("./../../sites/all/themes/omega/alpha/css/grid/alpha_default/fluid/alpha-default-fluid-12.css?mzi3di");</style>
+<!--<![endif]-->
+  <script type="text/javascript" src="./../../misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="./../../misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="./../../misc/drupal.js?mzi3di"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&amp;mzi3di"></script>
+<script type="text/javascript" src="./../../sites/default/files/languages/es_OeX2da62x0NdoUiG2v1GMDTVM_D3qxFuvWh_dFQskeo.js?mzi3di"></script>
+<script type="text/javascript" src="./../../sites/all/modules/ip_geoloc/js/ip_geoloc_current_location.js?mzi3di"></script>
+<script type="text/javascript" src="./../../sites/all/themes/mascotas/js/scripts.js?mzi3di"></script>
+<script type="text/javascript" src="./../../sites/all/themes/omega/omega/js/jquery.formalize.js?mzi3di"></script>
+<script type="text/javascript" src="./../../sites/all/themes/omega/omega/js/omega-mediaqueries.js?mzi3di"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/petstore\/","pathPrefix":"","ajaxPageState":{"theme":"mascotas","theme_token":"nevu6j2Ju-RKx4cIdu_uyLWwLNPjON2-u2nL-lN1so0","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"https:\/\/maps.googleapis.com\/maps\/api\/js?sensor=true":1,"public:\/\/languages\/es_OeX2da62x0NdoUiG2v1GMDTVM_D3qxFuvWh_dFQskeo.js":1,"sites\/all\/modules\/ip_geoloc\/js\/ip_geoloc_current_location.js":1,"sites\/all\/themes\/mascotas\/js\/scripts.js":1,"sites\/all\/themes\/omega\/omega\/js\/jquery.formalize.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie6.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie7.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie8.css":1,"sites\/all\/themes\/mascotas\/css\/ie\/ie9.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-reset.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-mobile.css":1,"sites\/all\/themes\/omega\/alpha\/css\/alpha-alpha.css":1,"sites\/all\/themes\/omega\/omega\/css\/formalize.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-text.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-branding.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-menu.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/default\/files\/fontyourface\/font.css":1,"http:\/\/fonts.googleapis.com\/css?family=Cabin:500|Gloria+Hallelujah:regular\u0026subset=latin":1,"sites\/all\/themes\/mascotas\/css\/global.css":1,"ie::fluid::sites\/all\/themes\/mascotas\/css\/mascotas-alpha-default.css":1,"ie::fluid::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/fluid\/alpha-default-fluid-12.css":1,"fluid::sites\/all\/themes\/mascotas\/css\/mascotas-alpha-default.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/fluid\/alpha-default-fluid-12.css":1}},"ip_geoloc_menu_callback":"ip-geoloc-current-location","ip_geoloc_refresh_page":false,"omega":{"layouts":{"primary":"fluid","order":["fluid"],"queries":{"fluid":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)"}}}});
+//--><!]]>
+</script>
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body class="html not-front not-logged-in page-taxonomy page-taxonomy-term page-taxonomy-term- page-taxonomy-term-7 context-perdida">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Pasar al contenido principal</a>
+  </div>
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-6 region region-branding" id="region-branding">
+  <div class="region-inner region-branding-inner">
+        <div class="branding-data clearfix">
+            <div class="logo-img">
+        <a href="./../../index.html" rel="home" title="Tienda de mascotas"><img src="./../../sites/all/themes/mascotas/logo.png" alt="Tienda de mascotas" id="logo" /></a>      </div>
+                        <hgroup class="site-name-slogan">        
+                                <h2 class="site-name"><a href="./../../index.html" title="Inicio">Tienda de mascotas</a></h2>
+                              </hgroup>
+          </div>
+          </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-system block-menu block-main-menu block-system-main-menu odd block-without-title" id="block-system-main-menu">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="./../../index.html">Inicio</a></li>
+<li class="leaf"><a href="/petstore/servicios2">Servicios</a></li>
+<li class="leaf"><a href="/petstore/adoptar" title="">Mascotas para adopción</a></li>
+<li class="leaf"><a href="/petstore/encontrada" title="">Mascotas encontradas</a></li>
+<li class="last leaf active-trail"><a href="/petstore/perdida" title="" class="active-trail active">Mascotas perdidas</a></li>
+</ul>    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">  
+  <div id="zone-content" class="zone zone-content clearfix container-12">    
+          <div id="breadcrumb" class="grid-12"><h2 class="element-invisible">Se encuentra usted aquí</h2><div class="breadcrumb"><a href="./../../index.html">Inicio</a> » <a href="/petstore/nuestras-secciones">Perdida</a></div></div>
+        
+        <div class="grid-12 region region-content" id="region-content">
+  <div class="region-inner region-content-inner">
+    <a id="main-content"></a>
+                <h1 class="title" id="page-title">Perdida</h1>
+                        <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-mascotas view-id-mascotas view-display-id-page view-dom-id-ca2dd98e2d994244fd4f518dca93b5ea">
+        
+      <div class="view-filters">
+      <form action="/petstore/nuestras-secciones/7/" method="get" id="views-exposed-form-mascotas-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-field-mascota-tipo-tid-wrapper" class="views-exposed-widget views-widget-filter-field_mascota_tipo_tid">
+                  <label for="edit-field-mascota-tipo-tid">
+            Filtra tu búsqueda y obtén resultados mas precisos           </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-mascota-tipo-tid">
+ <select id="edit-field-mascota-tipo-tid" name="field_mascota_tipo_tid" class="form-select"><option value="All" selected="selected">- Any -</option><option value="1">Aves</option><option value="3">Gatos</option><option value="4">Peces</option><option value="2">Perros</option></select>
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-mascotas" name="" value="Apply" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form>    </div>
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="close">Cerrar</span></span>  </div>  
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><img typeof="foaf:Image" src="./../../sites/default/files/imagefield_H771WX.jpg" width="526" height="233" alt="Abico conventio metuo. Capto damnum exputo iustum molior refero sagaciter." title="Huic praemitto tego. Hos iustum mos saepius ymo." /></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content">Commoveo Defui Gilvus Immitto In Quis Vero</h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Cogo eros eu. Defui genitus haero premo valde. Augue luptatum os utrum vel ymo. Loquor secundum utinam.
+
+Abluo ad brevitas ille inhibeo loquor luctus nibh nostrud vindico. Adipiscing dolus immitto in mos ratis. Augue incassum saluto tum ullamcorper. Hos iusto praemitto sagaciter tincidunt tum. Augue eum exerci genitus illum imputo lenis lucidus natu paratus.
+
+Abbas causa dignissim importunus jus nutus quadrum tum wisi. Abdo aliquip enim facilisis luctus natu praemitto probo sudo. Gravis letalis tum. Defui ibidem te volutpat. Humo luctus luptatum minim molior persto saluto typicus. Abbas brevitas enim metuo nobis occuro oppeto vulpes. Abluo cui jus laoreet ullamcorper vulputate. At camur patria plaga rusticus sed vereor vindico. Augue blandit causa similis.
+
+Laoreet mauris nibh nostrud singularis sudo turpis wisi. Abigo bene consectetuer elit lenis mauris veniam. Eum facilisis feugiat gemino huic nunc proprius refero. Euismod facilisi huic laoreet ludus pecus quibus te turpis usitas. Macto suscipere venio wisi. Conventio ibidem pecus. Iustum letalis oppeto voco vulpes. Abigo adipiscing aliquip caecus diam dolor genitus veniam.
+
+Abbas appellatio brevitas huic patria tego uxor. Dolor et eu nulla proprius suscipit torqueo validus. Commoveo ille jugis mos obruo persto tamen. Meus olim quadrum. Appellatio esca minim velit vereor. Iustum quae quidem. Abluo dolore ludus natu persto tego. Amet gilvus iaceo premo. Caecus feugiat gemino ideo interdico ludus occuro odio.
+
+Adipiscing amet decet ex huic ideo pertineo sed venio ymo. Adipiscing eligo populus secundum sino suscipere.
+
+Abico aliquam consequat damnum distineo exerci iusto roto tation tum. Diam et eum minim. Gemino huic imputo lobortis ludus probo quibus ratis vindico vulputate. Duis esca euismod nulla valde. Capto eligo genitus gilvus gravis immitto mos odio virtus zelus. Aliquip augue jus neque quibus saepius sit.
+
+Cui exerci jus lobortis nimis odio. Amet decet eros mos turpis validus vulputate. Conventio et eu sino voco. Elit illum minim neo obruo odio quadrum valde.
+
+Et exputo sit. Abico fere iaceo jugis jumentum mauris pneum proprius tincidunt ulciscor. Bene cui praesent usitas velit.
+
+</div>  </div>  
+  <div class="views-field views-field-mail">    <strong class="views-label views-label-mail">Correo electrónico</strong>    <span class="field-content"><a href="mailto:marcelo.diaz.santis@gmail.com">marcelo.diaz.santis@gmail.com</a></span>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="close">Cerrar</span></span>  </div>  
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><img typeof="foaf:Image" src="./../../sites/default/files/imagefield_QzeDBg.jpg" width="471" height="201" alt="Autem nunc oppeto quidne singularis utinam utrum." title="Abdo capto enim inhibeo iusto lenis lobortis magna neque suscipit." /></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content">Amet Antehabeo Dolus Haero Iriure Qui Ulciscor</h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Duis eligo nimis quia similis vulpes. Adipiscing neque pneum probo sed usitas. Illum obruo odio praesent sed tincidunt ullamcorper vulpes. Appellatio blandit eligo iaceo quia quibus veniam. Diam ex humo inhibeo lucidus modo pala populus secundum. Caecus gravis singularis turpis usitas.
+
+Abluo defui jumentum os quadrum saluto utinam velit vulputate. At duis humo melior paratus persto. Cui patria te vulpes. Esca huic iriure persto. Adipiscing cui elit facilisis jugis luptatum pertineo qui quis.
+
+</div>  </div>  
+  <div class="views-field views-field-mail">    <strong class="views-label views-label-mail">Correo electrónico</strong>    <span class="field-content"></span>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="close">Cerrar</span></span>  </div>  
+  <div class="views-field views-field-field-mascota-fotografia-2">        <div class="field-content"><img typeof="foaf:Image" src="./../../sites/default/files/imagefield_DRIMfR.jpg" width="548" height="544" alt="Abico huic interdico lucidus pertineo plaga suscipere te turpis." title="Feugiat minim nunc pecus saepius singularis wisi." /></div>  </div>  
+  <div class="views-field views-field-title">        <h3 class="field-content">Ad Aliquam Autem Exputo Interdico Lobortis Luptatum Pecus Secundum Sudo Velit</h3>  </div>  
+  <div class="views-field views-field-field-mascota-descripcion">        <div class="field-content">Diam facilisi luctus probo voco. Iriure luctus sed valde. Amet ea importunus minim odio os pertineo roto suscipit. Commodo duis ex scisco.
+
+Abdo aliquip autem distineo dolor nobis persto praesent premo. Ludus luptatum nibh probo quae. Dolus duis esse iusto laoreet mos natu pneum quia virtus. Duis elit laoreet lenis meus neque. Duis immitto in nostrud. Luptatum plaga suscipit te usitas vicis. Comis hos neo refoveo. At commodo consequat quadrum sino. Meus quis singularis virtus.
+
+Antehabeo augue commoveo laoreet quadrum. Abico acsi damnum duis eum metuo occuro suscipere ymo. Abluo diam huic ideo incassum quia veniam. Causa dolore dolus probo quia sagaciter vereor. Appellatio at ex luptatum natu pagus ut utrum wisi.
+
+Interdico nimis quadrum vel. Damnum dolore pala praesent refero sudo tamen vero. At cogo consectetuer elit ex neque ullamcorper. Abdo comis iusto ludus sagaciter. Consectetuer diam distineo eu humo ideo letalis pagus torqueo validus.
+
+Bene brevitas et exputo nulla paratus populus. Abigo autem dolor iriure neque oppeto quidem saepius si venio. Accumsan dolus loquor quibus. Iaceo ibidem jus nisl os rusticus ullamcorper usitas vel volutpat.
+
+Dignissim genitus obruo uxor. Consectetuer ibidem singularis. At dolus gemino gilvus mos sed ullamcorper.
+
+Accumsan brevitas gilvus inhibeo iriure nunc obruo praesent tego ullamcorper. Caecus lenis refero similis te typicus. Esca nimis pneum vero. Abbas causa interdico jumentum modo natu nibh occuro quibus. Abbas abluo decet nunc obruo oppeto veniam.
+
+</div>  </div>  
+  <div class="views-field views-field-mail">    <strong class="views-label views-label-mail">Correo electrónico</strong>    <span class="field-content"><a href="mailto:marcelo.diaz.santis@gmail.com">marcelo.diaz.santis@gmail.com</a></span>  </div>  
+  <div class="views-field views-field-field-mascota-encontrada">        <div class="field-content"></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div>      </div>
+</div>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+  <div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">  
+  <div id="zone-footer" class="zone zone-footer clearfix container-12">
+    <div class="grid-12 region region-footer-first" id="region-footer-first">
+  <div class="region-inner region-footer-first-inner">
+    <section class="block block-views block-tax-mascotas-block block-views-tax-mascotas-block odd" id="block-views-tax-mascotas-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Selecciona la mascota que buscas</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-tax-mascotas view-id-tax_mascotas view-display-id-block view-dom-id-c3ed2fb31063f08a75eb2b3dec319785">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/aves"><img typeof="foaf:Image" src="./../../sites/default/files/styles/square_thumbnail/public/birds-of-paradise.jpg?itok=jpTVRADr" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/aves">Aves</a></span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/gatos"><img typeof="foaf:Image" src="./../../sites/default/files/styles/square_thumbnail/public/Cats.jpg?itok=wjK3AoBC" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/gatos">Gatos</a></span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/peces"><img typeof="foaf:Image" src="./../../sites/default/files/styles/square_thumbnail/public/Fish-Background-Wallpapers-For-Desktop.jpg?itok=skn8W91N" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/peces">Peces</a></span>  </div>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field views-field-field-mascota-fotografia">        <div class="field-content"><a href="/petstore/perros"><img typeof="foaf:Image" src="./../../sites/default/files/styles/square_thumbnail/public/Dogs-Pictures-6.jpg?itok=kAjVmSof" width="180" height="180" alt="" /></a></div>  </div>  
+  <div class="views-field views-field-name">        <span class="field-content"><a href="/petstore/perros">Perros</a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div><div id="zone-postscript-wrapper" class="zone-wrapper zone-postscript-wrapper clearfix">  
+  <div id="zone-postscript" class="zone zone-postscript clearfix container-12">
+    <div class="grid-3 region region-postscript-first" id="region-postscript-first">
+  <div class="region-inner region-postscript-first-inner">
+    <section class="block block-views block-publicidad-block block-views-publicidad-block odd" id="block-views-publicidad-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block view-dom-id-aea120c61704b6348988e3249f9cf919">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./../../sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-second" id="region-postscript-second">
+  <div class="region-inner region-postscript-second-inner">
+    <section class="block block-views block-publicidad-block-1 block-views-publicidad-block-1 odd" id="block-views-publicidad-block-1">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_1 view-dom-id-e435eddf9fbe099af9ea29919d81d093">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./../../sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-third" id="region-postscript-third">
+  <div class="region-inner region-postscript-third-inner">
+    <section class="block block-views block-publicidad-block-2 block-views-publicidad-block-2 odd" id="block-views-publicidad-block-2">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_2 view-dom-id-0205773d4ddad1549042a0b64040eb14">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./../../sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-3 region region-postscript-fourth" id="region-postscript-fourth">
+  <div class="region-inner region-postscript-fourth-inner">
+    <section class="block block-views block-publicidad-block-3 block-views-publicidad-block-3 odd" id="block-views-publicidad-block-3">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Publicidad</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-publicidad view-id-publicidad view-display-id-block_3 view-dom-id-79a60cffa4ee3258bfe3e876b62352df">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+  <div class="views-field views-field-field-publicidad-imagen">        <div class="field-content"><a href="http://queulatdev.usach.cl/petstore/#" target="_blank"><img typeof="foaf:Image" src="./../../sites/default/files/default_images/public_0.png" alt="" /></a></div>  </div></li>
+      </ul></div>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div></footer>  </div>  </body>
+</html>
